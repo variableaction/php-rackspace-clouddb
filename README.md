@@ -16,7 +16,7 @@ PHP Class for connecting applications to [Rackspace's Cloud Databases Service](h
 
 ##Usage - Connecting
 
-**Example One - Simple Connection**
+**Simple Connection**
 
 	<?php
 
@@ -24,7 +24,7 @@ PHP Class for connecting applications to [Rackspace's Cloud Databases Service](h
 	
 	?>
 	
-**Example Two - Connection to Alternative Datacenter**
+**Connection to Alternative Datacenter**
 
 	<?php
 	
@@ -32,7 +32,7 @@ PHP Class for connecting applications to [Rackspace's Cloud Databases Service](h
 	
 	?>
 	
-**Example Three - Connection to London Datacenter using London Authentication**
+**Connection to London Datacenter using London Authentication**
 
 	<?php
 	
@@ -40,9 +40,26 @@ PHP Class for connecting applications to [Rackspace's Cloud Databases Service](h
 		
 	?>
 
-##Usage - Connecting
+##Usage - Basic
 
-**Example One - Manual Token Generation**
+**Example One - List Instances**
+
+	<?php
+	
+		// Set up connection
+		$rcdb = new RackspaceCloudDB('example user','123abc123abc123abc123abc123abc12','123456');
+	
+		// execute request
+		$responseObject = $rcdb->listInstances();
+		
+		// View Response
+		echo '<pre>'.print_r($responseObject,true).'</pre>';
+	
+	?>
+
+##Usage - Advanced
+
+**Manual Token Generation**
 
 	<?php
 	
@@ -54,20 +71,6 @@ PHP Class for connecting applications to [Rackspace's Cloud Databases Service](h
 			
 	?>
 	
-**Example Two - List Instances**
-
-	<?php
-	
-		// Set up connection
-		$rcdb = new RackspaceCloudDB('example user','123abc123abc123abc123abc123abc12','123456','DFW');
-	
-		// execute request
-		$responseObject = $rcdb->listInstances();
-		
-		// View Response
-		echo '<pre>'.print_r($responseObject,true).'</pre>';
-	
-	?>
 	
 ##Additional Resources
 
