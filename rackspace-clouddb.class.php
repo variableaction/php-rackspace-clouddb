@@ -303,6 +303,21 @@
 			
 			return json_decode($response);
 		}
+		
+	# -----------------------------------------------------------------------------------
+	#	restartInstance() -- tested; works
+	# -----------------------------------------------------------------------------------
+	
+		public function restartInstance($instanceID) {	
+						
+			$response = $this->basicCURL(
+				$this->api->endpoints->clouddb.'/instances/'.$instanceID.'/action',
+				array('X-Auth-Token: '.$this->authToken,'Content-Type: application/json','Accept: application/json'),
+				'{"restart": {}}'
+			);
+			
+			return json_decode($response);
+		}
 	
 	
 	
