@@ -25,22 +25,23 @@ $responseObject = $rcdb->listInstances();
 // List all database users in an instance
 //$responseObject = $rcdb->listDatabaseInstanceUsers(RACKSPACE_INSTANCE_ID);
 
-// List all flavours (hardware profiles)
+// List all flavors (hardware profiles)
 //$responseObject = $rcdb->listFlavors();
 
 // Create a new database
-//$responseObject = $rcdb->createDatabase(RACKSPACE_INSTANCE_ID, $newDbName);
+//$responseObject = $rcdb->createDatabase(RACKSPACE_INSTANCE_ID, $database);
 
 // Create a new user
-//$responseObject = $rcdb->createUser(RACKSPACE_INSTANCE_ID,$newDbName,'inkrato-app','mkfp28mt');
+//$responseObject = $rcdb->createUser(RACKSPACE_INSTANCE_ID,$database,'inkrato-app','mkfp28mt');
 
 // Grant a user access to a database
-//$responseObject = $rcdb->grantUserAccess(RACKSPACE_INSTANCE_ID, $newDbName, 'inkrato-app');
+//$responseObject = $rcdb->grantUserAccess(RACKSPACE_INSTANCE_ID, $database, 'inkrato-app');
 
 // Revoke a users access to a database
-//$responseObject = $rcdb->revokeUserAccess(RACKSPACE_INSTANCE_ID, $newDbName, 'inkrato-app');
+//$responseObject = $rcdb->revokeUserAccess(RACKSPACE_INSTANCE_ID, $database, 'inkrato-app');
 
-// NB: Not all operations (such as creating databases or users) return a response
+// NB: Some operations (such as creating a database or a user) don't return a
+// JSON response object unless there an error occurs.
 echo '<pre>'.print_r($responseObject,true).'</pre>';
 
 ?>
