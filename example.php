@@ -28,17 +28,17 @@ $responseObject = $rcdb->listInstances();
 // List all flavors (hardware profiles)
 //$responseObject = $rcdb->listFlavors();
 
-// Create a new database
+// Create a new database (with the name defined in $database)
 //$responseObject = $rcdb->createDatabase(RACKSPACE_INSTANCE_ID, $database);
 
-// Create a new user
-//$responseObject = $rcdb->createUser(RACKSPACE_INSTANCE_ID,$database,'inkrato-app','mkfp28mt');
+// Create a new user ('john.smith' with the password 'p4ssw0rd')
+//$responseObject = $rcdb->createUser(RACKSPACE_INSTANCE_ID,$database,'john.smith','p4assw0rd');
 
-// Grant a user access to a database
-//$responseObject = $rcdb->grantUserAccess(RACKSPACE_INSTANCE_ID, $database, 'inkrato-app');
+// Grant a user ('john.smith') access to a database
+//$responseObject = $rcdb->grantUserAccess(RACKSPACE_INSTANCE_ID, $database, 'john.smith');
 
 // Revoke a users access to a database
-//$responseObject = $rcdb->revokeUserAccess(RACKSPACE_INSTANCE_ID, $database, 'inkrato-app');
+//$responseObject = $rcdb->revokeUserAccess(RACKSPACE_INSTANCE_ID, $database, 'john.smith');
 
 // NB: Some operations (such as creating a database or a user) don't return a
 // JSON response object unless there an error occurs.
