@@ -1,4 +1,4 @@
-#php-rackspace-clouddb - *work-in-progress*
+#php-rackspace-clouddb
 
 PHP Class for connecting applications to [Rackspace's Cloud Databases Service](http://www.rackspace.com/cloud/cloud_hosting_products/databases/)
 
